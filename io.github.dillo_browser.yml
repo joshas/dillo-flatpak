@@ -1,0 +1,34 @@
+id: io.github.dillo_browser.dillo
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: dillo
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --share=network
+  - --persist=.dillo
+  - --persist=.fltk
+rename-desktop-file: dillo.desktop
+rename-icon: dillo
+modules:
+  - name: fltk
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://www.fltk.org/pub/fltk/1.3.10/fltk-1.3.10-source.tar.gz
+        sha256: c1c96d4f2ca7844f4b7945b4670aff2846f150cd5f3e23e3e4c70a61807108c7
+    cleanup:
+      - "*"
+  - name: dillo
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/dillo-browser/dillo/releases/download/v3.1.1/dillo-3.1.1.tar.gz
+        sha256: 4e8c6d1846113a0106860c2b98740331ee7cc3ae7a0e83e240d542a3b66c184a
+      - type: file
+        path: io.github.dillo_browser.dillo.metainfo.xml
+    post-install:
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
+    cleanup:
+      - "/lib/debug"

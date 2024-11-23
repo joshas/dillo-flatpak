@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.dillo_browser.dillo</id>
+  
+  <name>Dillo</name>
+  <summary>Multi-platform graphical web browser</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  
+  <description>
+    <p>Dillo is a web browser designed to be fast, use few resources and support slow and unreliable networks on resource-constrained machines. It can load local and remote files via HTTP, HTTPS and FTP. Other protocols like Gemini, Gopher, IPFS and others are available as plugins.</p>
+    <p>Dillo supports a subset of HTML 4.01 and CSS 2.1 but it doesn't support JavaScript and only implements some elements of HTML 5 and CSS 3. It also renders plain text documents and images in PNG, JPG, GIF and SVG formats.</p>
+  </description>
+  
+  <launchable type="desktop-id">dillo.desktop</launchable>
+  
+  <url type="bugtracker">https://github.com/dillo-browser/dillo/issues</url>
+  <url type="help">https://dillo-browser.github.io/user_help.html</url>
+  <url type="homepage">https://dillo-browser.github.io/</url>
+  <url type="donation">https://liberapay.com/dillo/</url>
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://dillo-browser.github.io/img/mini-plan9.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://dillo-browser.github.io/img/mini-armadillo.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://dillo-browser.github.io/img/mini-suckless.png</image>
+    </screenshot>
+  </screenshots>
+  
+  <content_rating type="oars-1.1" />
+  
+  <releases>
+    <release version="3.1.1" date="2024-06-08">
+      <url>https://dillo-browser.github.io/release/3.1.1/</url>
+    </release>
+  </releases>
+</component>
